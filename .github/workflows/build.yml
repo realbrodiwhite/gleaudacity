@@ -131,7 +131,7 @@ jobs:
           postfix: '-22.04'
     steps:
     - name: Checkout Audacity
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Setup Dependencies
       uses: audacity/audacity-actions/dependencies@v2
       with:
@@ -189,7 +189,7 @@ jobs:
           windows_sdk: '10.0.22000.0'
     steps:
     - name: Checkout Audacity
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Setup Dependencies
       uses: audacity/audacity-actions/dependencies@v2
       with:
@@ -224,7 +224,7 @@ jobs:
     runs-on: macos-11
     steps:
     - name: Checkout Audacity
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Setup Dependencies
       uses: audacity/audacity-actions/dependencies@v2
       with:
@@ -258,7 +258,7 @@ jobs:
     runs-on: macos-11
     steps:
     - name: Checkout Audacity
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Setup Dependencies
       uses: audacity/audacity-actions/dependencies@v2
       with:
@@ -301,7 +301,7 @@ jobs:
     needs: [build_macos_intel, build_macos_arm64]
     steps:
     - name: Checkout Audacity
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - uses: actions/download-artifact@v2
       with:
         name: macos-intel-${{ github.run_id }}-${{ github.run_attempt }}
@@ -343,7 +343,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout Audacity
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Setup Dependencies
       uses: audacity/audacity-actions/dependencies@v2
       with:
