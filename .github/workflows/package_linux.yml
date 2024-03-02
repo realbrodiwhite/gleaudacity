@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout Audacity
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Setup Dependencies
       uses: audacity/audacity-actions/dependencies@v2
     - name: Configure
@@ -100,7 +100,7 @@ jobs:
         OWNER=${{ github.repository_owner }}
         echo "LOWERCASE_OWNER=${OWNER,,}" >> ${GITHUB_ENV}
     - name: Checkout Audacity
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Log in to the Container registry
       uses: docker/login-action@v1
       with:
